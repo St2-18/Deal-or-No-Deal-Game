@@ -26,17 +26,29 @@ The game follows the classic rules where the player selects a box and progresses
 ## 📂 Project Structure
 
 DealOrNoDeal/
+
 │── src/main/java/
+
 │ ├── com.dealornodeal/
+
 │ │ ├── Main.java # Entry point
+
 │ │ ├── GameController.java # Handles game logic & rounds
+
 │ │ ├── UIController.java # JavaFX GUI
+
 │ │ ├── Database.java # MySQL connectivity
+
 │── src/main/resources/
+
 │ ├── styles.css # JavaFX styles
+
 │ ├── layout.fxml # JavaFX layout
+
 │── pom.xml # Maven dependencies
+
 │── README.md # Project documentation
+
 
 ---
 
@@ -54,7 +66,8 @@ Make sure you have installed:
 
 ### 1. Clone the repository
 
-git clone https://github.com/YOUR-USERNAME/DealOrNoDeal.git
+git clone (https://github.com/St2-18/Deal-or-No-Deal-Game.git)
+
 cd DealOrNoDeal
 
 ### 2. Configure MySQL
@@ -66,15 +79,21 @@ CREATE DATABASE dealornodeal;
 #### 2. Create a table to store results:
 
 CREATE TABLE players (
+
 id INT AUTO_INCREMENT PRIMARY KEY,
+
 name VARCHAR(100),
+
 amount_won INT
+
 );
 
 #### 3. Update your Database.java file with your MySQL credentials:
 
 private static final String URL = "jdbc:mysql://localhost:3306/dealornodeal";
+
 private static final String USER = "root";
+
 private static final String PASSWORD = "your_password";
 
 ### 3. Build & Run
@@ -82,6 +101,7 @@ private static final String PASSWORD = "your_password";
 #### Using Maven:
 
 mvn clean install
+
 mvn javafx:run
 
 #### Or directly from NetBeans (if using NetBeans, just run the project).
